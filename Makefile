@@ -1,4 +1,4 @@
-IMAGE=mcandre/docker-redis-slim
+IMAGE=mcandre/docker-redis-slim:latest
 
 all: run
 
