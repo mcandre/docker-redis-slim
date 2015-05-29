@@ -1,4 +1,4 @@
-IMAGE=mcandre/docker-redis-slim:latest
+IMAGE=mcandre/docker-redis-slim
 
 all: run
 
@@ -7,6 +7,7 @@ build: Dockerfile
 
 run: clean-containers build
 	$(eval CONTAINER=$(shell docker run -d -p 6379:6379 $(IMAGE)))
+	docker exec $(CONTAINER) redis-cli --version
 	docker exec $(CONTAINER) redis-cli set dogmoon 3
 	docker exec $(CONTAINER) redis-cli get dogmoon
 	docker images | grep $(IMAGE) | awk '{ print $$(NF-1), $$NF }'

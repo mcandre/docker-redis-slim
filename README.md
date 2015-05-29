@@ -14,12 +14,14 @@ docker-redis-slim is a container for a Redis server, made smaller with a few tec
 
 ```
 $ make
-docker exec 23dee794567ef3cd19e485b27251cc59d217b0fa53e5c8cdca0f4571662be709 redis-cli set dogmoon 3
+docker exec 1d444db858c306b2e4998d86ff90f24d27b5856b2eee81c14c93f1a444db8544 redis-cli --version
+redis-cli 3.0.1 (git:d614dd0c)
+docker exec 1d444db858c306b2e4998d86ff90f24d27b5856b2eee81c14c93f1a444db8544 redis-cli set dogmoon 3
 OK
-docker exec 23dee794567ef3cd19e485b27251cc59d217b0fa53e5c8cdca0f4571662be709 redis-cli get dogmoon
+docker exec 1d444db858c306b2e4998d86ff90f24d27b5856b2eee81c14c93f1a444db8544 redis-cli get dogmoon
 3
 docker images | grep mcandre/docker-redis-slim | awk '{ print $(NF-1), $NF }'
-6.65 MB
+7.618 MB
 ```
 
 # REQUIREMENTS
