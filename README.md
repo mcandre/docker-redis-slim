@@ -20,7 +20,7 @@ docker exec 1d444db858c306b2e4998d86ff90f24d27b5856b2eee81c14c93f1a444db8544 red
 OK
 docker exec 1d444db858c306b2e4998d86ff90f24d27b5856b2eee81c14c93f1a444db8544 redis-cli get dogmoon
 3
-docker images | grep mcandre/docker-redis-slim | awk '{ print $(NF-1), $NF }'
+docker images | grep mcandre/docker-redis-slim:3.0 | awk '{ print $(NF-1), $NF }'
 7.618 MB
 ```
 
