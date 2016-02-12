@@ -4,4 +4,4 @@ RUN echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/reposito
     apk update && \
     apk add redis@edge
 EXPOSE 6379
-ENTRYPOINT /usr/bin/redis-server
+ENTRYPOINT ["/usr/bin/redis-server"]
